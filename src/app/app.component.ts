@@ -21,6 +21,8 @@ export class AppComponent implements OnInit{
       new Date(),
       5
     );
+
+    this.mySnap.setLocation('At home');
   }
   
 }
