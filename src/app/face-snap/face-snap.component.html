@@ -10,6 +10,6 @@
 <p>FaceSnap créée le {{faceSnap.createdAt}}</p>
 <p>
     <button (click)="onSnap()">{{snapButtonText}}</button>
-    👍 {{faceSnap.snaps}}
+    <span [ngStyle]="{color:'rgb(0, '+ faceSnap.snaps +', 0)' }">👍 {{faceSnap.snaps}}</span>
 </p>
 </div>
