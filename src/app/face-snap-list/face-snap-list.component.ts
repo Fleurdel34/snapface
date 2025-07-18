@@ -3,6 +3,7 @@ import { FaceSnap } from '../models/face-snap';
 import { FaceSnapComponent } from "../face-snap/face-snap.component";
 import { FaceSnapsService } from '../services/face-snaps.service';
 
+
 @Component({
   selector: 'app-face-snap-list',
   standalone: true,
@@ -17,7 +18,7 @@ export class FaceSnapListComponent implements OnInit{
 
   ngOnInit(): void {
     this.faceSnaps = this.faceSnapsService.getFaceSnaps();    
-
     this.faceSnaps[1].setLocation('à la montagne');
   }
+
 }
