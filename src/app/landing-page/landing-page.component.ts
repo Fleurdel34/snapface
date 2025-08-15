@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent {
+export class LandingPageComponent{
 
   userEmail!:string;
 
-  constructor(private router:Router){}
+    constructor(private router:Router){}
 
   onContinue() {
     this.router.navigateByUrl("facesnaps");
@@ -23,4 +23,7 @@ export class LandingPageComponent {
     console.log(form.value);
   }
 
-}
+
+} 
+
+
