@@ -1,16 +1,17 @@
-import { ApplicationConfig, LOCALE_ID } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom} from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { HttpClientModule, withInterceptors } from '@angular/common/http';
-import { provideHttpClient } from '@angular/common/http';
 import { routes } from './app.routes';
-import { authInterceptor } from './interceptors/auth.interceptor';
+import { CoreModule } from './core/core.module';
+import { FaceSnapsModule } from './face-snaps/face-snaps.module';
+import { LandingPageModule } from './landing-page/landing-page.module';
+
 
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes),
-  {provide:LOCALE_ID, useValue: 'fr-FR'},
-  HttpClientModule,
-  provideHttpClient(withInterceptors([authInterceptor]))
+  provideRouter(routes),
+  importProvidersFrom(CoreModule),
+  importProvidersFrom(FaceSnapsModule),
+  importProvidersFrom(LandingPageModule)
 ]
 };
