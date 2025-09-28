@@ -4,6 +4,7 @@ import { routes } from './app.routes';
 import { CoreModule } from './core/core.module';
 import { FaceSnapsModule } from './face-snaps/face-snaps.module';
 import { LandingPageModule } from './landing-page/landing-page.module';
+import { AuthModule } from './auth/auth.module';
 
 
 
@@ -12,6 +13,7 @@ export const appConfig: ApplicationConfig = {
   provideRouter(routes),
   importProvidersFrom(CoreModule),
   importProvidersFrom(FaceSnapsModule),
-  importProvidersFrom(LandingPageModule)
+  importProvidersFrom(LandingPageModule),
+  importProvidersFrom(AuthModule)
 ]
 };
